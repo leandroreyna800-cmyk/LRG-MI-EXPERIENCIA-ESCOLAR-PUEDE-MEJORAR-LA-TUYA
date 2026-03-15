@@ -28,6 +28,7 @@ margin:0;
 padding:0;
 display:flex;
 justify-content:center;
+flex-wrap:wrap;
 }
 
 nav ul li{
@@ -55,7 +56,7 @@ position:absolute;
 top:100%;
 left:0;
 background:#3d6ea3;
-min-width:180px; /* submenú más ancho */
+min-width:180px;
 }
 
 nav ul li ul li a{
@@ -69,6 +70,27 @@ background:#5b8cc0;
 
 nav ul li:hover ul{
 display:block;
+}
+
+/* AJUSTE PARA DISPOSITIVOS MOVILES */
+
+@media (max-width:768px){
+
+nav ul{
+flex-direction:column;
+align-items:center;
+}
+
+nav ul li{
+width:100%;
+text-align:center;
+}
+
+nav ul li ul{
+position:static;
+width:100%;
+}
+
 }
 
 </style>
